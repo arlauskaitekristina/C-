@@ -14,6 +14,6 @@ int num_2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите третье число: ");
 int num_3 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("наибольшее число = " + (num_1 > num_2 ? num_1 : num_2
-                                        (num_1 > num_3 ? num_1 : num_3
-                                        num_2 > num_3 ? num_2 : num_3)))
+Console.WriteLine("наибольшее число = " + (num_1 > num_2 ?
+                                          (num_1 > num_3 ? num_1 : num_3) :
+                                          (num_2 > num_3 ? num_2 : num_3)));
