@@ -5,8 +5,6 @@
 
 Console.Write("Эта программа находит наибольшее из двух чисел\nВведите первое число: ");
 int num_1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите второе число: ");
+Console.Write("Введите второе число: ");
 int num_2 = Convert.ToInt32(Console.ReadLine());
-
 Console.WriteLine("Наибольшее число = " + (num_1 > num_2 ? num_1 : num_2));
