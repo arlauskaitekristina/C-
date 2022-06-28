@@ -7,4 +7,5 @@
 
 int num = 4;
 int square = num * num;
+
 Console.WriteLine(square);
