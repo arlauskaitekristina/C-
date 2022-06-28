@@ -3,7 +3,9 @@
 // 5 -> Пятница
 
 Console.Write("Эта программа выдает название дня недели по заданному номеру.\nВведите цифру от 1 до 7: ");
+
 int day = Convert.ToInt32(Console.ReadLine());
+
 if (day == 1) Console.WriteLine("Понедельник");
 else if (day == 2) Console.WriteLine("Вторник");
 else if (day == 3) Console.WriteLine("Среда");
