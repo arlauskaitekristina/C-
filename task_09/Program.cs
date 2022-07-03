@@ -36,4 +36,5 @@ int MaxDigit(int num)
 }
 int maxDigit = MaxDigit(rndNum);
 string result = maxDigit > 0 ? maxDigit.ToString() : "Цифры одинаковые"; 
+
 Console.WriteLine($"Наибольшая цифра числа {rndNum} => {maxDigit}");
