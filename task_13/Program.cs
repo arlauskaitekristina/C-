@@ -9,6 +9,7 @@ int numRnd = Convert.ToInt32(Console.ReadLine());
 
 if (numRnd / 100 != 0)
 {
+    while (numRnd / 1000 != 0) numRnd /= 10;
     Console.WriteLine("Третья цифра = " + numRnd % 10);
 }
 else
