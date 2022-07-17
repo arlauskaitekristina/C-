@@ -4,39 +4,44 @@
 
 
 Console.WriteLine("Эта программа задаёт массив заполненный случайными положительными трёхзначными числами и показывает количество чётных чисел в массиве.");
+Console.Write("На сколько элементов задать массив?: ");
+int numN = Convert.ToInt32(Console.ReadLine());
 
-int[] num = new int[4];
 
-void CreateNumRnd(int[] array, int min, int max)
+int[] CreateArrayRndInt(int size)
 {
+    int[] array = new int[size];
+    Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(min, max);
+        array[i] = rnd.Next(100, 1000);
+    }
+    return array;
+}
+
+void PrintArr(int[] array)
+{
+    Console.WriteLine($"Сгенерированный массив из {array.Length} элементов: ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i == 0) Console.Write("[");
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.WriteLine($"{array[i]}]");
+    
     }
 }
 
-void SearchNum(int[] array)
+int QuantityPositive(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    int quantity = 0;
+    for (int i = 0; i<array.Length; i++ )
     {
-        Console.Write(array[i] + " ");
+        if (array[i] % 2 == 0) quantity++;
     }
-    Console.WriteLine();
+  return quantity;
 }
 
-int PrintArr(int[] array)
-{
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 == 1) count++;
-    }
-    return count;
-}
-
-CreateNumRnd(num, 100, 1000);
-SearchNum(num);
-Console.WriteLine();
-
-int count = PrintArr(num);
-Console.WriteLine($"Количество чётных чисел в массиве: {count}");
+int[] arr = CreateArrayRndInt(numN);
+PrintArr(arr);
+int result = QuantityPositive(arr);
+Console.WriteLine($"Количество чётных чисел в массиве: {result}");
