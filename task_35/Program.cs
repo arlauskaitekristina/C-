@@ -113,17 +113,19 @@ int[] CreateArrayRndInt(int size, int begin, int end)
 
 void PrintArr(int[] array)
 {
+    Console.WriteLine($"Сгенерированный массив из {array.Length} элементов: ");
     for (int i = 0; i < array.Length; i++)
     {
         if (i == 0) Console.Write("[");
-        if (i < array.Length - 1) Console.Write(array[i] + ",");
-        else Console.Write(array[i] + "]");
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.WriteLine($"{array[i]}]");
+    
     }
 }
 
 void PrintRes (int res)
 {
-Console.Write($"Колличество элементов массива, входящих в дипазон [10...99]: {res}");
+Console.Write($"\nКолличество элементов массива, входящих в дипазон [10...99]: {res}");
 }
 
 int[] genarr = CreateArrayRndInt( intsize, min, max);
