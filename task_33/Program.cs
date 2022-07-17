@@ -4,7 +4,7 @@
 
 Console.WriteLine("Эта программа определяет, присутствует ли заданное число в массиве.");
 Console.WriteLine("Введите размер массива: ");
- int intsize = Convert.ToInt32(Console.ReadLine());
+int intsize = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите минимальное число диапазона: ");
 int min = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите максимальное число: ");
