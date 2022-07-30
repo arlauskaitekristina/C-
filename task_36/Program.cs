@@ -10,13 +10,13 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное число: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-int[] CreateArrayRndInt(int size, int begin, int end)
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] array = new int[size];
     Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.Next(begin, end + 1);
+        array[i] = rnd.Next(min, max);
     }
     return array;
 }
@@ -36,7 +36,7 @@ void PrintArr(int[] array)
 int SumNum(int[] array)
 {
     int result = 0;
-    for (int i = 1; i < array.Length; i += 2)
+    for (int i = 0; i < array.Length; i += 2)
     {
         result += array[i];
     }
