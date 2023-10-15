@@ -9,7 +9,6 @@ for (int i = 0; i < n; i++)
 Console.WriteLine("Начальный массив: [" + string.Join(", ", sortArray) + "]");
 Console.WriteLine();
 
-
 int[] QuickSort(int[] array, int minIndex, int maxIndex)
 {
     if (minIndex >= maxIndex)
@@ -53,6 +52,6 @@ void Swap(ref int leftItem, ref int rightItem)
 
     rightItem = temp;
 }
-    
+
 Console.WriteLine("Конечный массив: [" + string.Join(", ", sortedArray) + "]");
-    Console.ReadLine();
+Console.ReadLine();

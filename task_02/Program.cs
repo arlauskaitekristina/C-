@@ -14,6 +14,3 @@ else if (day == 5) Console.WriteLine("Пятница");
 else if (day == 6) Console.WriteLine("Суббота");
 else if (day == 7) Console.WriteLine("Воскресенье");
 else Console.WriteLine("Это не цифра от 1 до 7");
-
-
-

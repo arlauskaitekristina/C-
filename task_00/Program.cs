@@ -4,7 +4,6 @@
 // -3 -> 9
 // -7 -> 49
 
-
 int num = 4;
 int square = num * num;
 
