@@ -36,7 +36,7 @@ void PrintArr(int[] array)
 int SumNum(int[] array)
 {
     int result = 0;
-    for (int i = 0; i < array.Length; i += 2)
+    for (int i = 1; i < array.Length; i += 2)
     {
         result += array[i];
     }
